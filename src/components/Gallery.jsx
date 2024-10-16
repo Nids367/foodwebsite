@@ -19,6 +19,7 @@ const Gallery=()=>{
       'https://lh3.googleusercontent.com/p/AF1QipMK1MS69cRjfwLuk2VcrTzkCbb3g3WyZHxGh1d0=s1360-w1360-h1020',
       'https://lh3.googleusercontent.com/p/AF1QipPDXErEl5USwntMB1c9oanrJL6qV5nXOUwJipw=s1360-w1360-h1020',
       'https://lh3.googleusercontent.com/p/AF1QipMDJN3oJerHBmXg5U2223ivMrRu5fC7JfF3XGQt=s1360-w1360-h1020',
+      'https://lh3.googleusercontent.com/p/AF1QipO4Ne5Q3eF0EFPT3ciH61pERNk19nTAUxzsGMKM=s1360-w1360-h1020',
     ],
     Food: [
       'https://lh3.googleusercontent.com/p/AF1QipOYZmLT5k5iqdLyxCX24mxrkX2D1cSt0_2WWcG5=s1360-w1360-h1020',
@@ -59,9 +60,9 @@ const Gallery=()=>{
           </button>
         ))}
       </div>
-      <div className="image-gallery w-[440px] flex item-center object-cover object-center h-80">
+      <div className="image-gallery  grid lg:grid-cols-5 grid-cols-1 ">
         {images[activeTab].map((src, index) => (
-          <img key={index} src={src} alt={`Tab ${activeTab} Image ${index + 1}`} />
+          <img  key={index} src={src} alt={`Tab ${activeTab} Image ${index + 1}`} className='h-full aspect-square object-cover' />
         ))}
       </div>
     </div>
