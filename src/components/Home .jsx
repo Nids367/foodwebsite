@@ -33,11 +33,11 @@ function Home() {
           },
         }}
       >
-        {/* {sliderImages.map((item) => ( */}
+        {sliderImages.map((item) => (
           <SwiperSlide>
             <img src={sliderImages[2]} alt="img" />
           </SwiperSlide>
-        {/* ))} */}
+         ))} 
       </Swiper>
     </>
   )

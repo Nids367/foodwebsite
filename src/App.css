@@ -2,10 +2,10 @@ h1{
     border: none;
 }
 
-  body{
-    font-family: "Caveat", cursive;
+  h1{
+    font-family: "Playwrite GB S", cursive;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: medium;
   font-style: normal;
 }
   

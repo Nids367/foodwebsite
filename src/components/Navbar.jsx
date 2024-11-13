@@ -1,11 +1,11 @@
 import logo from'../assests/logo.jpg';
 import { FaSearch } from "react-icons/fa";
- import { Link } from 'react-router-dom';
+ import { NavLink } from 'react-router-dom';
  
 function Navbar(){
    const navItem=[
       {tittle:"Home",address:"/"},
-      {tittle:"Our menu",address:"/Cards"},
+      {tittle:"Our menu",address:"/Menu"},
       {tittle:"About us",address:"/About"},
       {tittle:"Contact us",address:"/Footer"},
    ];
@@ -22,9 +22,9 @@ function Navbar(){
      </div>
      <div className='flex justify-around  p-2 w-1/2'>
       {navItem.map((item)=>(
-         <Link to={item.address}>
+         <NavLink to={item.address}>
             <li className='text-black text-xl capitalize'>{item.tittle}</li>
-         </Link>
+         </NavLink>
       ))}
      </div>
      <div className='p-2'>

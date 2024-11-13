@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import HomePage from './pages/HomePage';
-import Cards from './components/Cards';
+import Menu from './components/Menu';
 import About from './components/About';
 import Footer from './components/Footer';
 function App() {
@@ -11,10 +11,10 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-          <Route path='/' Component={HomePage} />
-          <Route path='/cards' Component={Cards} />
-          <Route path='/cards' Component={About} />
-          <Route path='/cards' Component={Footer} />
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/menu' element={<Menu/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/footer' element={<Footer/>} />
         </Routes>
       </BrowserRouter>
 
