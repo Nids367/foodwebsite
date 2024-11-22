@@ -44,7 +44,7 @@ const Gallery=()=>{
   return (
     <div className=' space-y-4 text-center p-5 w-[100vw] '>
       <h1 className='text-6xl font-cursiv '> Gallery</h1>
-      <div className="tabs space-x-8  bg-indigo-600 item-center rounded-lg px-4 py-2  ">
+      <div className="tabs space-x-8  bg-indigo-600 item-center rounded-lg px-4 py-1  ">
         {Object.keys(images).map((tab) => (
           <button
             key={tab}

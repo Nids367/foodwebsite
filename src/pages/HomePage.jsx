@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Home from '../components/Home '
-import Menu from '../components/Menu'
-import About from '../components/About'
+import Menu from './MenuPage'
+import About from './AboutPage'
 import Gallery from '../components/Gallery'
 import Footer from '../components/Footer'
+import Location from './Location'
 
 
 const HomePage = () => {
@@ -14,6 +15,7 @@ const HomePage = () => {
             <Menu/>
             <About />
             <Gallery />
+            <Location/>
             <Footer /></>
     )
 }

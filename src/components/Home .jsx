@@ -1,45 +1,31 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules"
+import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules"
+import 'swiper/css';
 
-function Home() {
-  const sliderImages = [
-    "https://media.licdn.com/dms/image/v2/D4E05AQE5LY7h7gkP0A/videocover-high/videocover-high/0/1680276029533?e=2147483647&v=beta&t=QNc8UaXpPrHNHjXEJIrvsCE2QudccMTMu5vuk-mj-9I",
-    "https://content.jdmagicbox.com/comp/dhar/p8/9999p7292.7292.230314153029.a9p8/catalogue/naivedya-cafe-and-restaurant-dhamnod-dhar-restaurants-roi6jcf5hl-250.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt4TcSumML6M-Ei1N0JfXcZoUHs1HsSwYvbw&s",
-  ]
+function Home(){
+  
   return (
-    <>
-      <Swiper
-        className="mySwiper w-[100vw] h-[60vh]"
-        slidesPerView={1}
-        spaceBetween={32}
-        modules={[Autoplay, Pagination]}
-        loop={true}
-        centeredSlides={true}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 32,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 32,
-          },
-          1024: {
-            slidesPerView: 1,
-            spaceBetween: 32,
-          },
-        }}
-      >
-        {sliderImages.map((item) => (
-          <SwiperSlide>
-            <img src={sliderImages[2]} alt="img" />
-          </SwiperSlide>
-         ))} 
-      </Swiper>
-    </>
-  )
-}
+    <div className="h-60vh w-100vw p-10">
+    <Swiper
+      modules={[Navigation,Pagination,Scrollbar,Autoplay]}
+      spaceBetween={32}
+      slidesPerView={1}
+      navigation
+      pagination={{clickable:true}}
+      scrollbar={{draggable:true}}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      <SwiperSlide><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt4TcSumML6M-Ei1N0JfXcZoUHs1HsSwYvbw&s" alt="image"  /></SwiperSlide>
+      <SwiperSlide><img src="https://lh3.googleusercontent.com/p/AF1QipPABp9Ife0LiSrtpDYF4kH9mMMIlEy_biG-daiZ=s1360-w1360-h1020" alt="image"  /></SwiperSlide>
+      <SwiperSlide><img src="https://lh3.googleusercontent.com/p/AF1QipOqmZM0SxMjHdPsmIlx73LRBznH5qyb-TDA469U=s1360-w1360-h1020" alt="image" /></SwiperSlide>
+    
+      ...
+
+    </Swiper>
+    </div>
+  );
+};
+
 export default Home;
