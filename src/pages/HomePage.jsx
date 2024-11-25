@@ -8,11 +8,11 @@ import Footer from '../components/Footer'
 import Location from './Location'
 
 
+
 const HomePage = () => {
     return (
         <><Navbar />
             <Home />
-            <Menu/>
             <About />
             <Gallery />
             <Location/>

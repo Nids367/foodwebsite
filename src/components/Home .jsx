@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules"
 import 'swiper/css';
 import { Link } from "react-router-dom";
+import { elementPath } from "../routes/path";
 
 function Home(){
   
@@ -21,15 +22,15 @@ function Home(){
     >
       
       <SwiperSlide><div><img src="https://lh3.googleusercontent.com/p/AF1QipPABp9Ife0LiSrtpDYF4kH9mMMIlEy_biG-daiZ=s1360-w1360-h1020" alt="image" style={{width:"100%",height:"56vh"}} />
-      <Link to="../pages/MenuPage">
-      <button className="absolute  transform-translate-x-1/2 bottom-32 ml-28 rounded text-xl bg-purple-400 text-black border-none cursor-pointer  transition-all duration-300 hover:bg-white ">OUR MENU</button>
+      <Link to={elementPath.Menu}>
+      <button className="absolute  transform-translate-x-1/2 bottom-32 ml-48 rounded text-xl bg-purple-400 text-black border-none cursor-pointer  transition-all duration-300 hover:bg-white ">OUR MENU</button>
       </Link></div></SwiperSlide>
       
 
 
       <SwiperSlide><div><img src="https://lh3.googleusercontent.com/p/AF1QipOqmZM0SxMjHdPsmIlx73LRBznH5qyb-TDA469U=s1360-w1360-h1020" alt="image" style={{width:"100%",height:"56vh"}} />
-      <Link to="../pages/MenuPage">
-      <button className="absolute  transform-translate-x-1/2 bottom-32 ml-28 rounded text-xl bg-purple-400 text-black border-none cursor-pointer  transition-all duration-300 hover:bg-white">OUR MENU</button>
+      <Link to={elementPath.Menu}>
+      <button className="absolute  transform-translate-x-1/2 bottom-32 ml-48 rounded text-xl bg-purple-400 text-black border-none cursor-pointer  transition-all duration-300 hover:bg-white">OUR MENU</button>
       </Link></div></SwiperSlide>
       
 

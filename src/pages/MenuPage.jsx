@@ -1,8 +1,11 @@
 import Cards from "../components/Cards";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 function Menu(){
     return(
         <>
+        <Navbar/>
         <div>
                 <h1 className="text-6xl font-cursiv text-center ">OUR MENU</h1>
                 <div className='flex flex-wrap px-80'>
@@ -20,6 +23,7 @@ function Menu(){
                         title="Beverages" />
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }
